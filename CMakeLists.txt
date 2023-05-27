@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 
 project(Log VERSION 1.0.0 LANGUAGES CXX)
 
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -24,7 +25,10 @@ target_link_libraries(Log PRIVATE
 #file(GLOB H_FILES
 #    "*.h"
 #)
-
+target_sources(Log PUBLIC
+    log.h
+    log_global.h
+)
 target_sources(Log PRIVATE
     log.cpp
 )
