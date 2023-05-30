@@ -8,12 +8,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 #add_definitions(-DLOG_LIBRARY)
-add_compile_definitions(LOG_LIBRARY=ON)
+#add_compile_definitions(LOG_LIBRARY=ON)
 find_package(Qt6 REQUIRED COMPONENTS
     Core
 )
 
 qt_add_library(Log ${LIB_COMPILE_MODE})
+target_compile_definitions(Log PUBLIC LOG_LIBRARY)
 
 
 target_link_libraries(Log PRIVATE
