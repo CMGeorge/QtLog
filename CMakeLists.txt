@@ -7,7 +7,8 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-add_definitions(-DLOG_LIBRARY)
+#add_definitions(-DLOG_LIBRARY)
+add_compile_definitions(LOG_LIBRARY=ON)
 find_package(Qt6 REQUIRED COMPONENTS
     Core
 )
